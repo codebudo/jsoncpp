@@ -1,3 +1,5 @@
+(note: I did not write jsoncpp. I have simply moved it to github and added cmake build capabilities. This is convenient if you'd like to use jsoncpp as a submodule to another git-maintained project.)
+
 * Introduction:
   =============
 
@@ -16,27 +18,25 @@ Unserialization parsing is user friendly and provides precise error reports.
 
 * Building/Testing:
   =================
+ 
+JsonCpp can be built using Scons (http://www.scons.org) or CMake (http://www.cmake.org) as a build system. Scons requires python to be installed (http://www.python.org).
 
-JsonCpp uses Scons (http://www.scons.org) as a build system. Scons requires
-python to be installed (http://www.python.org).
+To build with CMake type:
+    cmake . && make
 
-You download scons-local distribution from the following url:
-http://sourceforge.net/projects/scons/files/scons-local/1.2.0/
+To build with Scons type:
+    python scons.py platform=PLTFRM [TARGET]
+    where PLTFRM may be one of:
+        suncc Sun C++ (Solaris)
+        vacpp Visual Age C++ (AIX)
+        mingw 
+        msvc6 Microsoft Visual Studio 6 service pack 5-6
+        msvc70 Microsoft Visual Studio 2002
+        msvc71 Microsoft Visual Studio 2003
+        msvc80 Microsoft Visual Studio 2005
+        msvc90 Microsoft Visual Studio 2008
+        linux-gcc Gnu C++ (linux, also reported to work for Mac OS X)
 
-Unzip it in the directory where you found this README file. scons.py Should be 
-at the same level as README.
-
-python scons.py platform=PLTFRM [TARGET]
-where PLTFRM may be one of:
-	suncc Sun C++ (Solaris)
-	vacpp Visual Age C++ (AIX)
-	mingw 
-	msvc6 Microsoft Visual Studio 6 service pack 5-6
-	msvc70 Microsoft Visual Studio 2002
-	msvc71 Microsoft Visual Studio 2003
-	msvc80 Microsoft Visual Studio 2005
-	msvc90 Microsoft Visual Studio 2008
-	linux-gcc Gnu C++ (linux, also reported to work for Mac OS X)
 
 Notes: if you are building with Microsoft Visual Studio 2008, you need to 
 setup the environment by running vcvars32.bat (e.g. MSVC 2008 command prompt)
