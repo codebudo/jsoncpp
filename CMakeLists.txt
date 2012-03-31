@@ -2,9 +2,6 @@ project (jsoncpp)
 
 cmake_minimum_required(VERSION 2.8)
 
-#CMAKE_PLATFORM_DEFINES += -D CMAKE_INSTALL_PREFIX="$(CMAKE_VENDOR_INSTALL_DIR)"
-#CMAKE_PLATFORM_DEFINES += -D CMAKE_PREFIX_PATH="$(CMAKE_VENDOR_INSTALL_DIR)"
-
 include_directories (
   include
 )
