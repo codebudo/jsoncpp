@@ -21,8 +21,18 @@ Unserialization parsing is user friendly and provides precise error reports.
  
 JsonCpp can be built using Scons (http://www.scons.org) or CMake (http://www.cmake.org) as a build system. Scons requires python to be installed (http://www.python.org).
 
-To build with CMake type:
-    cmake . && make
+To build with CMake:
+
+1. Install CMake in your system and make sure it is in your `$PATH` variable.
+2. Open a new terminal an go to jsoncpp directory.
+3. `mkdir build`
+4. `cd build`
+5. `cmake ..`
+6. `make`
+7. `sudo make install`
+8. Enjoy.
+
+Libray will be installed in `/usr/local/lib` and header files un `/usr/local/include`.
 
 To build with Scons type:
     python scons.py platform=PLTFRM [TARGET]
