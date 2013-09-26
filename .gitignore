@@ -10,3 +10,8 @@ buildscons/
 libs/
 lib/
 work/
+
+####
+# Cmake output
+#
+build/
