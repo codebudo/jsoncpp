@@ -1,4 +1,4 @@
-CMAKE_BUILD_DIR ?= work
+CMAKE_BUILD_DIR ?= build
 SOURCE_DIR := $(shell pwd)
 
 VENDOR_INSTALL_PREFIX ?= $(SOURCE_DIR)
@@ -6,12 +6,12 @@ ifneq ($(VENDOR_INSTALL_PREFIX),"")
 	CMAKE_PLATFORM_DEFINES := -D CMAKE_INSTALL_PREFIX=$(VENDOR_INSTALL_PREFIX)
 endif
 
+.PHONY: default
+default: build
+
 .PHONY: install
 install: build
 	$(MAKE) -C $(CMAKE_BUILD_DIR) install
-
-.PHONY: default
-default: install
 
 .PHONY: clean
 clean:
