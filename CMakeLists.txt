@@ -81,7 +81,7 @@ add_library(${PROJECT_LIBRARY_NAME} ${PROJECT_SOURCE_FILES})
 # Install Target
 # =================================================================
 # Copy header files
-INSTALL(FILES ${PROJECT_HEADER_FILES} DESTINATION "/usr/local/include/json")
+INSTALL(FILES ${PROJECT_HEADER_FILES} DESTINATION ${CMAKE_INSTALL_PREFIX}/include/json)
 
 # Copy library
-INSTALL(FILES "${CMAKE_BINARY_DIR}/lib/lib${PROJECT_LIBRARY_NAME}.a" DESTINATION "/usr/local/lib")
+INSTALL(FILES "${CMAKE_BINARY_DIR}/lib/lib${PROJECT_LIBRARY_NAME}.a" DESTINATION ${CMAKE_INSTALL_PREFIX}/lib)
