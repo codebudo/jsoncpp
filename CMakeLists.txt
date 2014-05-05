@@ -3,18 +3,15 @@ cmake_minimum_required(VERSION 2.6)
 
 
 # =================================================================
-# Project variables
+# Project variables and properties
 # =================================================================
 # Setup these variables and the rest of the CMakeLists.txt won't need more changes.
 set(PROJECT_NAME "JsonCpp")
+project("${PROJECT_NAME}")
+
 set(PROJECT_LIBRARY_NAME "json")
 set(PROJECT_SOURCE_DIR "${CMAKE_SOURCE_DIR}/src")
 set(PROJECT_HEADERS_DIR "${CMAKE_SOURCE_DIR}/include")
-
-# =================================================================
-# Project properties
-# =================================================================
-project("${PROJECT_NAME}")
 
 # Specify build output directories
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib")
